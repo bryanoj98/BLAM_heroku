@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>BLAM Administrador</title>
+
+  <!-- Custom fonts for this template -->
+  <link href="./admin-tecnico/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+
+  <!-- Custom styles for this template -->
+  <link href="./admin-tecnico/css/sb-admin-2.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="./admin-tecnico/Pagina2_css.css">
+  <!-- Custom styles for this page -->
+  <link href="./admin-tecnico/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+    <header>
+        <h1>B anda</br>L ógica</br>A utómatica</br>M ovil</br>ADMINISTRADOR</h1>
+      </header>
+
+  <!-- Page Wrapper -->
+  <div id="wrapper">
+
+
+
+
+
+
+    <!-- End of Sidebar -->
+
+    <!-- Content Wrapper -->
+
+    <div id="content-wrapper" class="d-flex flex-column">
+
+      <!-- Main Content -->
+
+        <!-- End of Topbar -->
+
+        <!-- Begin Page Content -->
+        <div class="container-fluid">
+          <br>
+            <nav>
+              <p>
+                  <input type="button"
+                  value ="Crear usuario"
+                  onclick="showForm1()">
+                  <input type="button"
+                  value ="Actualizar usuario"
+                  onclick="showForm1()">
+                  <input type="button"
+                  value ="Desactivar usuario"
+                  onclick="showForm2()">
+                </p>
+            </nav>
+
+
+            <section hidden id="form1">
+                <!-- <h1>Nuevo Usuario</h1> -->
+                <p><br>
+                  <label>Nombre</label>
+                  <input type="text" id="Name">
+                </p>
+                <p>
+                  <label>Contraseña</label>
+                  <input type="password" id="password">
+                </p>
+                <p>
+                  <label>Tipo de usuario</label>
+                  <input list ="tipo" id="Asign">
+                  <datalist id ="tipo">
+                    <option value="Administrador">
+                      Administrador</option>
+                    <option value="Cliente">
+                      Cliente</option>
+                    <option value="Comercial">
+                      Comercial</option>
+                    <option value="Técnico">
+                      Técnico</option>
+                  </datalist>
+                </p>
+                <p>
+                    <label>Habilitado</label>
+                    <input type="checkbox" id="hab">
+                  </p>
+                  <p>
+                    <label>Logueado</label>
+                    <input type="checkbox" id="log">
+                  </p>
+                    <nav>
+                <input type="button"
+                  value="Agregar"
+                  onclick="EditTable(false)">
+                <input type="button"
+                  value="Agregar y Cerrar"
+                  onclick="EditTable(true)">
+                <input type="button"
+                  value="Cancelar"
+                  onclick="hideForm()">
+                </nav>
+              </section>
+
+              <section hidden id="form2">
+                <p><br>
+                <label>el ID del usuario que desea Desactivar</label>
+                <input type="number">
+              </p>
+              <nav>
+                  <input type="button"
+                    value="Desactivar"
+                    onclick="EditTable(false)">
+                  <input type="button"
+                    value="Desactivar y Cerrar"
+                    onclick="EditTable(true)">
+                  <input type="button"
+                    value="Cancelar"
+                    onclick="hideForm()">
+                  </nav>
+                </section>
+
+          <!-- DataTales Example -->
+
+              <p><h6 class="m-0 font-weight-bold text-primary">Tiempo de Actualización: 10 ms </h6>
+            </p>
+              <h6 class="m-0 font-weight-bold text-primary">Lista de Usuarios</h6>
+            </div>
+            <div class="card-body">
+              <div class="table-responsive">
+                <!-- <form action="/UsuarioNeg/ReadFromTable/{{ Usuario._id }}" method="post"> -->
+
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                  <thead>
+                    <tr>
+                      <th>ID</th>
+                      <th>Nombre</th>
+                      <th>Contraseña</th>
+                      <th>Tipo de usuario</th>
+                      <th>Habilitado</th>
+                      <th>Logueado</th>
+                      <th>Fecha de creación</th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+                    <% for (var i = 0; i < usuario.length; i++) { %>                      
+                   <tr>
+                     <td><%= usuario[i].Id %></td>
+                     <td><%= usuario[i].Nombre %></td>
+                     <td><%= usuario[i].Tipo %></td>
+                     <td><%= usuario[i].Contraseña %></td>
+                     <td><%= usuario[i].Habilitado %></td>
+                     <td><%= usuario[i].Logueado %></td>
+                     <td><%= usuario[i].Habilitado %></td>
+                     <td><%= usuario[i].FechaVinculacion %></td>
+                   </tr>
+                  <% } %>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <!-- /.container-fluid -->
+
+      </div>
+      <!-- End of Main Content -->
+
+      <!-- Footer -->
+      <footer>
+          <p>Posted by: Alison Ruiz - Bryan Perez - Jorge Franco</p>
+          <p>Contact information: <a>
+          BLAM@gmail.com</a>.</p>
+        </footer>
+      <!-- End of Footer -->
+
+    </div>
+    <!-- End of Content Wrapper -->
+
+  </div>
+  <!-- End of Page Wrapper -->
+
+  <!-- Scroll to Top Button-->
+  <a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+  </a>
+
+  <!-- Bootstrap core JavaScript-->
+  <script src="./admin-tecnico/admin.js"></script>
+  <script src="./admin-tecnico/vendor/jquery/jquery.min.js"></script>
+  <script src="./admin-tecnico/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Core plugin JavaScript-->
+  <script src="./admin-tecnico/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom scripts for all pages-->
+  <script src="./admin-tecnico/js/sb-admin-2.min.js"></script>
+
+  <!-- Page level plugins -->
+  <script src="./admin-tecnico/vendor/datatables/jquery.dataTables.min.js"></script>
+  <script src="./admin-tecnico/vendor/datatables/dataTables.bootstrap4.min.js"></script>
+
+  <!-- Page level custom scripts -->
+  <script src="./admin-tecnico/js/demo/datatables-demo.js"></script>
+
+</body>
+
+</html>

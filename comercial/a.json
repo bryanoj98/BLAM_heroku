@@ -1,0 +1,37 @@
+[
+  {
+    "date": "2017-07-27",
+    "operator": "ums.dam",
+    "type": "General Query",
+    "subType": "Sales",
+    "message": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempus odio purus, sit amet semper leo congue eu. Aliquam erat."
+  },
+  {
+    "date": "2008-02-28",
+    "operator": "ums.rdl",
+    "type": "General Query",
+    "subType": "Media",
+    "message": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempus odio purus, sit amet semper leo congue eu. Aliquam erat."
+  },
+  {
+    "date": "2010-06-08",
+    "operator": "ums.dam",
+    "type": "General Query",
+    "subType": "Other",
+    "message": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempus odio purus, sit amet semper leo congue eu. Aliquam erat."
+  },
+  {
+    "date": "2016-02-05",
+    "operator": "ums.djf",
+    "type": "General Query",
+    "subType": "Press",
+    "message": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempus odio purus, sit amet semper leo congue eu. Aliquam erat."
+  },
+  {
+    "date": "2019-02-22",
+    "operator": "ums.djf",
+    "type": "Troubleshooting",
+    "subType": "Service",
+    "message": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempus odio purus, sit amet semper leo congue eu. Aliquam erat."
+  }
+]

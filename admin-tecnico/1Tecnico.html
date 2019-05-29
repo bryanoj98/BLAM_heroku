@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>BLAM Tecnico</title>
+
+  <!-- Custom fonts for this template -->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+
+  <!-- Custom styles for this template -->
+  <link href="css/sb-admin-2.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="Pagina2_css.css">
+  <!-- Custom styles for this page -->
+  <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+    <header>
+        <h1>B anda</br>L ógica</br>A utómatica</br>M ovil</br>TÉCNICO</h1>
+      </header>
+  <!-- Page Wrapper -->
+  <div id="wrapper">
+
+
+
+
+
+
+    <!-- End of Sidebar -->
+
+    <!-- Content Wrapper -->
+
+    <div id="content-wrapper" class="d-flex flex-column">
+
+      <!-- Main Content -->
+
+        <!-- End of Topbar -->
+
+        <!-- Begin Page Content -->
+        <div class="container-fluid">
+
+            <nav>
+                <p>
+                    <input type="button"
+                    value ="Dar ordenes por voz"
+                    onclick="listen()">
+                  </p>
+              </nav>
+              <div id="texto"></div>
+          <!-- DataTales Example -->
+          <section hidden id="Sensores">
+              <!-- <h1>Información Sensores Sistema x</h1>
+              <p>
+                <label>Ultrasonido: 5.4</label>
+              </p>
+              <p>
+                <label>Fotoresistencia: 2.4</label>
+              </p>
+              <p>
+                <label>Sensor de presencia: 1</label>
+              </p>
+              <p>
+                <label>Fin de carrera: 0</label>
+              </p>
+              <nav>
+              <input type="button"
+                value="Atras"
+                onclick="hideForms()">
+                <input type="button"
+                value ="Escuchar Información"
+                onclick="speak1()">
+              </nav> -->
+            </section>
+            <section hidden id="Actuadores">
+                <!-- <h1>Información Actuadores Sistema x</h1>
+                <p>
+                  <label>Velocidad de motor: 2.5</label>
+                </p>
+                <p>
+                  <label>Leds: 4</label>
+                </p>
+                <p>
+                  <label>Alarma: 0</label>
+                </p>
+                <p>
+                  <label>Relé: 0</label>
+                </p>
+                <nav>
+                <input type="button"
+                  value="Atras"
+                  onclick="hideForms()">
+                  <input type="button"
+                  value ="Escuchar Información"
+                  onclick="speak2()">
+                </nav> -->
+              </section>
+
+              <h6 class="m-0 font-weight-bold text-primary">Lista de Sistemas</h6>
+            </div>
+            <div class="card-body">
+              <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                  <thead>
+                    <tr>
+                      <th>Nombre Sistema</th>
+                      <th>Cliente</th>
+                      <th>Sensores</th>
+                      <th>Actuadores</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <% for (var i = 0; i < usuario.length; i++) { %>
+                   <tr>
+                     <td><%= usuario[i].NombreSistema %></td>
+                     <td><%= usuario[i].Cliente %></td>
+                     <td><%= usuario[i].Sensores %></td>
+                     <td><%= usuario[i].Actuadores %></td>
+                   </tr>
+                  <% } %>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <!-- /.container-fluid -->
+
+      </div>
+      <!-- End of Main Content -->
+
+      <!-- Footer -->
+      <footer>
+          <p>Posted by: Alison Ruiz - Bryan Perez - Jorge Franco</p>
+          <p>Contact information: <a>
+          BLAM@gmail.com</a>.</p>
+        </footer>
+      <!-- End of Footer -->
+
+    </div>
+    <!-- End of Content Wrapper -->
+
+  </div>
+  <!-- End of Page Wrapper -->
+
+  <!-- Scroll to Top Button-->
+  <a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+  </a>
+
+  <!-- Bootstrap core JavaScript-->
+  <script src="tecnico.js"></script>
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Core plugin JavaScript-->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom scripts for all pages-->
+  <script src="js/sb-admin-2.min.js"></script>
+
+  <!-- Page level plugins -->
+  <script src="vendor/datatables/jquery.dataTables.min.js"></script>
+  <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
+
+  <!-- Page level custom scripts -->
+  <script src="js/demo/datatables-demo.js"></script>
+
+</body>
+
+</html>
