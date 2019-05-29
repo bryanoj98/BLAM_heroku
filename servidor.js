@@ -214,9 +214,15 @@ app.post("/ClienteDa", function(req, res) {
 });
 app.get("/banda", function(req, res) {
     console.log("pedirClienteee");
+    req.on('data',function(data){
+      console.log(data);
+      var r={posx:1};//score
+      var vx = JSON.stringify(r);
 
+      res.json(vx);
+    });
     // res.render('Pagina2');
-    res.sendFile(path.join(__dirname, 'vistas/Pagina2.html'));
+    // res.sendFile(path.join(__dirname, 'vistas/Pagina2.html'));
 });
 app.get("/pedirCliente", function(req, res) {
     console.log("pedirClienteee");
