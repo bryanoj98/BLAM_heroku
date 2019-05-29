@@ -116,16 +116,15 @@ app.get('/pedirAdmin', function(req, res) {
   console.log ("Pedirrrrrrrrrrrrrr");
   // admin.UpdateInTable(result[i]);
 
-
-  // admin.Administrador(function (error, data) {
-  //     if (error) console.error (error);
-  //     else
-  //     {
+  admin.Administrador(function (error, data) {
+      if (error) console.error (error);
+      else
+      {
         // console.log (data);
         // res.sendFile(path.join(__dirname, 'vistas/Login.html'));
-        res.render('../vistas/1Administrador',{usuario:'hola'});
-  //     }
-  // });
+        res.render('../vistas/1Administrador',{usuario:data});
+      }
+  });
 });
 app.get("/vistas*", function(req, res) {
   res.sendFile(path.join(__dirname, '/vistas/'+req.params[0]));
