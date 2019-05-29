@@ -116,15 +116,16 @@ app.get('/pedirAdmin', function(req, res) {
   console.log ("Pedirrrrrrrrrrrrrr");
   // admin.UpdateInTable(result[i]);
 
-  admin.Administrador(function (error, data) {
-      if (error) console.error (error);
-      else
-      {
+
+  // admin.Administrador(function (error, data) {
+  //     if (error) console.error (error);
+  //     else
+  //     {
         // console.log (data);
         // res.sendFile(path.join(__dirname, 'vistas/Login.html'));
-        res.render('../vistas/1Administrador',{usuario:data});
-      }
-  });
+        res.render('../vistas/1Administrador',{usuario:'hola'});
+  //     }
+  // });
 });
 app.get("/vistas*", function(req, res) {
   res.sendFile(path.join(__dirname, '/vistas/'+req.params[0]));
@@ -213,7 +214,7 @@ app.post("/ClienteDa", function(req, res) {
   //    });
 });
 app.post("/banda", function(req, res) {
-    console.log("pedirClienteee");
+    console.log("banda");
     req.on('data',function(data){
       console.log(data);
       var r={posx:1};//score

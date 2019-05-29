@@ -14,10 +14,6 @@
     "dialect": "mysql"
   },
   "production": {
-    "username": "root",
-    "password": "nicolas98",
-    "database": "BLAM",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
+    "use_env_variable": "postgres://bocostbdkjpsat:5d5fb34dfabc923d24d75a7e52ddaabdd18f81c2e8ee65974c729a1387b42cd4@ec2-54-83-192-245.compute-1.amazonaws.com:5432/d3f3o02893r50d"
   }
 }
