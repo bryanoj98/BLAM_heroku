@@ -212,7 +212,7 @@ app.post("/ClienteDa", function(req, res) {
   //      res.render('../vistas/1Administrador',{usuario:result});
   //    });
 });
-app.get("/banda", function(req, res) {
+app.post("/banda", function(req, res) {
     console.log("pedirClienteee");
     req.on('data',function(data){
       console.log(data);
